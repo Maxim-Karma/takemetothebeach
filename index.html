@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wise.</title>
+    <title>LookThroughThePrism</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
         body {
             font-family: '0xProto Nerd Font';
-            background-color: rgb(37, 37, 37); /* Серый фон */
+            background-color: rgb(37, 37, 37);
             color: #ffffff;
             margin: 0;
             padding: 0;
@@ -32,7 +32,7 @@
         }
 
         .profile img {
-            border-radius: 50%;
+            border-radius: 5%;
             width: 100px;
             height: 100px;
             margin-top: -50px;
@@ -46,12 +46,17 @@
 
         .profile p {
             margin: 5px 0;
-            font-size: 1.2em;
+            font-size: 0.8em;
+        }
+
+        .profile w {
+            margin: 5px 0;
+            font-size: 1.0em;
         }
 
         .profile d, .profile dd, .profile a {
             margin: 2px 0;
-            font-size: 1em;
+            font-size: 1.2em;
         }
 
         .semi-transparent {
@@ -73,11 +78,18 @@
             font-size: 1.1em;
             display: flex;
             align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .links a:hover {
+            color: #00ff0d;
+            transform: scale(1.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.289);
+            border-radius: 5px;
+            padding: 5px;
         }
 
-        .links a:hover {
-            text-decoration: underline;
-        }
 
         .links img {
             margin-right: 8px;
@@ -89,8 +101,10 @@
             text-align: center;
             padding:  20px;
             background-color: rgb(32, 32, 32);
-            margin-top: 300px;
+            margin-top: 100px;
         }
+        
+
     </style>
 </head>
 <body>
@@ -99,22 +113,29 @@
 
 <div class="profile">
     <img src="avat.png" alt="Profile Picture">
-    <h1>Wise The Archive</h1>
-    <p>15 y.o. </p>
-    <d><span class="semi-transparent"><tt>him/his/she/her/they/their</tt></d>
-    <dd><span class="semi-transparent"><tt>Maxim Kokh</tt></dd>
+    <h1>Sunday</h1>
+    <w>16 y.o. </w>
+    <p><span class="semi-transparent">about me</p>
+    <dd><span class="semi-transparent"><tt>Native Language:Russian</tt></span></dd>
+    <d><span class="semi-transparent"><tt>pronounces:???/???</tt></d>
+    
 </div>
 
 <div class="links">
     <a href="https://www.instagram.com/maksim.kkh/"><img src="instalogo.png" alt="Insta logo"><tt>(insta)Gram page</tt></a>
-    <a href="https://t.me/mximarchive"><img src="tglogo.png" alt="Telegram logo"><tt>Tg channel</tt></a>
+    <a href="https://t.me/maximarchive"><img src="tglogo.png" alt="Telegram logo"><tt>Tg channel</tt></a>
     <a href="https://open.spotify.com/playlist/6KsevlguzEGptM36iRQpUV?si=eb30227052fa4117"><img src="spotifyLogo.png" alt="Spotify logo"><tt>Spotify</tt></a>
     <a href="https://github.com/Wise-Archive"><img src="githublogo.png" alt="github logo"><tt>Github page</tt></a>
     <a href="https://imgur.com/user/Diskreee/posts"><img src="imguricon.png" alt="imgur icon"><tt>Imgur (gif storage)</tt></a>
 </div>
 
+<div class="profile">
+    <d><span class="semi-transparent"><tt>aliases:Saturn/Wisdom/MaximKarma</tt></d>
+</div>
+
+
 <footer>
-    &copy; <tt>2024 Maxim Kokh/Wise.</tt>
+    &copy; <tt>2024 Maxim Kokh</tt>
 </footer>
 
 </body>
