@@ -49,13 +49,13 @@
             font-size: 0.8em;
         }
 
-        .profile w {
-            margin: 5px 0;
-            font-size: 1.0em;
-        }
 
         .profile d, .profile dd, .profile a {
             margin: 2px 0;
+            font-size: 1.2em;
+        }
+
+        .profile tt {
             font-size: 1.2em;
         }
 
@@ -105,12 +105,22 @@
         }
 
         .text w {
+            display: block;
+            margin: 5px 0;
+            font-size: 1.0em;
             text-align: center;
-            margin: 2px 0;
-            font-size: 1.2em;
+        }
 
+        .profile a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
         
+        .profile a:hover {
+            color: #00ff0d;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
     </style>
 </head>
@@ -136,12 +146,11 @@
 </div>
 
 <div class="profile">
-    <d><span class="semi-transparent"><tt>aliases:Saturn/Wisdom/MaximKarma</tt></d>
+    <div><span class="semi-transparent"><tt>aliases:Saturn/Wisdom/MaximKarma</tt></div>
+    <div><span class="semi-transparent"><tt>Browsers, which I using: <a href="https://zen-browser.app/">Zen</a>/<a href="https://deta.surf/">Deta Surf</a></tt></div>
 </div>
 
-<w><span class="semi-transparent"><tt>aliases:Saturn/Wisdom/MaximKarma</tt></w>
-
-
+    
 <footer>
     &copy; <tt>2024 Maxim Kokh</tt>
 </footer>
