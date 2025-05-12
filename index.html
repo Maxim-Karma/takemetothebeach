@@ -101,7 +101,7 @@
             text-align: center;
             padding:  20px;
             background-color: rgb(32, 32, 32);
-            margin-top: 100px;
+            margin-top: 30px;
         }
 
         .text w {
@@ -122,6 +122,65 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
+        /* Стили для галереи фотографий */
+        .photo-gallery {
+            max-width: 900px;
+            margin: 50px auto 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery-toggle {
+            cursor: pointer;
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .gallery-toggle:hover {
+            color: #00ff0d;
+            background-color: rgba(0, 0, 0, 0.289);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .gallery-container.show {
+            max-height: 1500px; /* Достаточно большое значение, чтобы вместить все фото */
+            transition: max-height 0.3s ease-in;
+        }
+
+        .gallery-item {
+        width: 200px;
+        height: 200px;
+        border-radius: 3px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 20px;
+        background-color: #2a2a2a; /* Цвет фона для пустых областей */
+        }  
+
+        .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 255, 13, 0.5);
+        z-index: 1; /*  z-index, чтобы элемент был поверх других при наведении */
+        }
+
+        .gallery-item img {
+        width: 100%;
+        height: 100%;
+        bject-fit: contain; /* Изменено с cover на contain */
+        border-radius: 0px;
+        }
     </style>
 </head>
 <body>
@@ -150,10 +209,44 @@
     <div><span class="semi-transparent"><tt>Browsers, which I using: <a href="https://zen-browser.app/">Zen</a>/<a href="https://deta.surf/">Deta Surf<a></tt></div>
 </div>
 
+<!-- раздел с фотографиями -->
+<div class="photo-gallery">
+    <div class="gallery-toggle" id="galleryToggle">
+        <span class="semi-transparent"><tt>lovely pics</tt></span>
+    </div>
+    <div class="gallery-container" id="galleryContainer">
+        <!-- пути к изображениям на -->
+        <div class="gallery-item">
+            <img src="pngs/pics/pic1.jpg" alt="Фото 1">
+        </div>
+        <div class="gallery-item">
+            <img src="pngs/pics/pic2.jpg" alt="Фото 2">
+        </div>
+        </div>
+    </div>
+</div>
     
 <footer>
     &copy; <tt>2024 Maxim Kokh</tt>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryToggle = document.getElementById('galleryToggle');
+        const galleryContainer = document.getElementById('galleryContainer');
+        
+        galleryToggle.addEventListener('click', function() {
+            galleryContainer.classList.toggle('show');
+            
+            // Изменяем текст при открытии/закрытии (опционально)
+            if (galleryContainer.classList.contains('show')) {
+                galleryToggle.innerHTML = '<span class="semi-transparent"><tt>hide lovely pics</tt></span>';
+            } else {
+                galleryToggle.innerHTML = '<span class="semi-transparent"><tt>lovely pics</tt></span>';
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
