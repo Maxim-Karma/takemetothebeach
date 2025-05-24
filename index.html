@@ -32,7 +32,7 @@
         }
 
         .profile img {
-            border-radius: 5%;
+            border-radius: 50%;
             width: 100px;
             height: 100px;
             margin-top: -50px;
@@ -191,9 +191,9 @@
     <img src="pngs/head/avat.png" alt="Profile Picture">
     <h1>Sunday</h1>
     <w>16 y.o. </w>
-    <p><span class="semi-transparent">about me</p>
-    <dd><span class="semi-transparent"><tt>Native languge: Russian</tt></span></dd>
-    <d><span class="semi-transparent"><tt>No pronounces. Please, don't refer to me at all. Thanks.</tt></d>
+    <p><span class="semi-transparent">about me:</p>
+    <div><span class="semi-transparent"><tt>Native languge: Russian</tt></span></div>
+    <div><span class="semi-transparent"><tt>No pronounces. Please, don't refer to me at all. Thanks.</tt></div>
     
 </div>
 
@@ -202,6 +202,8 @@
     <a href="https://open.spotify.com/playlist/6KsevlguzEGptM36iRQpUV?si=eb30227052fa4117"><img src="pngs/icons/spotifyLogo.png" alt="Spotify logo"><tt>Spotify</tt></a>
     <a href="https://github.com/milyan-xyz"><img src="pngs/icons/githublogo.png" alt="github logo"><tt>Github page</tt></a>
     <a href="https://elemsocial.com/e/sunday"><img src="pngs/icons/elem.png" alt="elemsocial"><tt>ElementSocial page</tt></a>
+    <a href="https://bsky.app/profile/sunday-xyz.bsky.social"><img src='pngs/icons/bsky.png' alt="Bluesky logo"><tt>Bluesky profile</tt></a>
+    <a href="https://x.com/mercury_sunday"><img src="pngs/icons/x.png" alt="X logo"><tt>X profile</tt></a>
 </div>
 
 <div class="profile">
@@ -212,7 +214,7 @@
 <!-- раздел с фотографиями -->
 <div class="photo-gallery">
     <div class="gallery-toggle" id="galleryToggle">
-        <span class="semi-transparent"><tt>Gallery <3</tt></span>
+        <span class="semi-transparent"><tt>gallery.</tt></span>
     </div>
     <div class="gallery-container" id="galleryContainer">
         <!-- пути к изображениям на -->
@@ -238,11 +240,11 @@
         galleryToggle.addEventListener('click', function() {
             galleryContainer.classList.toggle('show');
             
-            // Изменяем текст при открытии/закрытии (опционально)
+            // текст при открытии/закрытии (опционально)
             if (galleryContainer.classList.contains('show')) {
-                galleryToggle.innerHTML = '<span class="semi-transparent"><tt>hide lovely pics</tt></span>';
+                galleryToggle.innerHTML = '<span class="semi-transparent"><tt>hide gallery.</tt></span>';
             } else {
-                galleryToggle.innerHTML = '<span class="semi-transparent"><tt>lovely pics</tt></span>';
+                galleryToggle.innerHTML = '<span class="semi-transparent"><tt>gallery.</tt></span>';
             }
         });
     });
