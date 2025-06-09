@@ -3,60 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yalocaloffgod</title>
+    <title>@yalocaloffgod</title>
     <link rel="icon" href="pngs/icons/favicon.png" type="image/png">
     <style>
         body {
             font-family: '0xProto Nerd Font';
-            background-color: rgb(37, 37, 37);
-            color: #ffffff;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
             margin: 0;
             padding: 0;
-
-
-        }
-
-        .header {
-            position: relative;
-            height: 200px;
-            background-image: url('pngs/head/backhead.png'); /* Фон можно сменить на изображение */
-            background-size: cover;
-            background-position: center;
-            /* background-color: rgb(32, 32, 32); */ /* Оставлено для возврата к цветному фону */
+            font-size: 15px; 
         }
 
         .profile {
             text-align: center;
-            padding: 20px;
+            padding: 60px;
             position: relative;
         }
 
         .profile img {
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            width: 130px;
+            height: 130px;
             margin-top: -50px;
             border: 0px solid #ffffff;
         }
 
         .profile h1 {
-            margin: 10px 0 5px;
-            font-size: 1.5em;
+            margin: 10px;
+            font-size: 25px; 
         }
 
         .profile p {
             margin: 5px 0;
-            font-size: 0.8em;
+            font-size: 15px; 
         }
-
 
         .profile d, .profile dd, .profile a {
             margin: 2px 0;
-            font-size: 1.2em;
+            font-size: 15px; 
         }
 
         .profile tt {
-            font-size: 1.2em;
+            font-size: 15px; 
         }
 
         .semi-transparent {
@@ -72,24 +61,22 @@
         }
 
         .links a {
-            color: #ffffff;
+            color: #000000; 
             text-decoration: none;
             margin: 10px;
-            font-size: 1.1em;
+            font-size: 15px; 
             display: flex;
             align-items: center;
-            transition: all 0.3s ease;
-        }
-        
-        .links a:hover {
-            color: #00ff0d;
-            transform: scale(1.1);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            background-color: rgba(0, 0, 0, 0.289);
-            border-radius: 5px;
-            padding: 5px;
+            transition: all 0.3s ease; 
+            border-radius: 10px; 
+            padding: 10px 20px; 
         }
 
+        .links a:hover {
+            background-color: rgba(0, 0, 0, 0.1); 
+            color: #811dc4; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
         .links img {
             margin-right: 8px;
@@ -97,158 +84,47 @@
             height: 24px;
         }
 
-        footer {
-            text-align: center;
-            padding:  20px;
-            background-color: rgb(32, 32, 32);
-            margin-top: 30px;
-        }
-
         .text w {
             display: block;
             margin: 5px 0;
-            font-size: 1.0em;
+            font-size: 15px; 
             text-align: center;
         }
 
         .profile a {
-            color: #ffffff;
+            color: #000000;
             text-decoration: none;
             transition: all 0.3s ease;
-        }
-        
-        .profile a:hover {
-            color: #00ff0d;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 15px; 
         }
 
-        /* Стили для галереи фотографий */
-        .photo-gallery {
-            max-width: 900px;
-            margin: 50px auto 0;
-            padding: 20px;
+        .profile w {
+            display: block;
+            margin: 5px 0;
+            font-size: 15px;
             text-align: center;
-        }
-
-        .gallery-toggle {
-            cursor: pointer;
-            display: inline-block;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            margin-bottom: 15px;
-        }
-
-        .gallery-toggle:hover {
-            color: #00ff0d;
-            background-color: rgba(0, 0, 0, 0.289);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .gallery-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .gallery-container.show {
-            max-height: 1500px; /* Достаточно большое значение, чтобы вместить все фото */
-            transition: max-height 0.3s ease-in;
-        }
-
-        .gallery-item {
-        width: 200px;
-        height: 200px;
-        border-radius: 3px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        margin: 20px;
-        background-color: #2a2a2a; /* Цвет фона для пустых областей */
-        }  
-
-        .gallery-item:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(0, 255, 13, 0.5);
-        z-index: 1; /*  z-index, чтобы элемент был поверх других при наведении */
-        }
-
-        .gallery-item img {
-        width: 100%;
-        height: 100%;
-        bject-fit: contain; /* Изменено с cover на contain */
-        border-radius: 0px;
         }
     </style>
 </head>
 <body>
 
-<div class="header"></div>
-
 <div class="profile">
     <img src="pngs/head/avat.png" alt="Profile Picture">
-    <h1>Sunday</h1>
-    <w>16 y.o. </w>
-    <p><span class="semi-transparent">about me:</p>
-    <div><span class="semi-transparent"><tt>Native languge: Russian</tt></span></div>
-    <div><span class="semi-transparent"><tt>No pronounces. Please, don't refer to me at all. Thanks.</tt></div>
-    
+    <h1>@Sunday</h1>
+    <w>16 y.o.</w>
+    <w>about me:</w>
+    <w>Native language: Russian</w>
+    <w>No pronouns. Please, don't refer to me at all. Thanks.</w>
 </div>
 
 <div class="links">
-    <a href="https://t.me/yalocaloffxyz"><img src="pngs/icons/tglogo.png" alt="Telegram logo"><tt>Tg channel</tt></a>
-    <a href="https://open.spotify.com/playlist/6KsevlguzEGptM36iRQpUV?si=eb30227052fa4117"><img src="pngs/icons/spotifyLogo.png" alt="Spotify logo"><tt>Spotify</tt></a>
-    <a href="https://github.com/milyan-xyz"><img src="pngs/icons/githublogo.png" alt="github logo"><tt>Github page</tt></a>
-    <a href="https://elemsocial.com/e/sunday"><img src="pngs/icons/elem.png" alt="elemsocial"><tt>ElementSocial page</tt></a>
-    <a href="https://bsky.app/profile/sunday-xyz.bsky.social"><img src='pngs/icons/bsky.png' alt="Bluesky logo"><tt>Bluesky profile</tt></a>
-    <a href="https://x.com/mercury_sunday"><img src="pngs/icons/x.png" alt="X logo"><tt>X profile</tt></a>
+    <a href="https://t.me/yalocaloffxyz"><img src="pngs/icons/Telegram_logo.svg" alt="Telegram logo">Telegram channel</a>
+    <a href="https://open.spotify.com/playlist/6KsevlguzEGptM36iRQpUV?si=eb30227052fa4117"><img src="pngs/icons/Spotify_icon.svg" alt="Spotify logo">Spotify profile</a>
+    <a href="https://github.com/maxim-karma"><img src="pngs/icons/GitHub_Invertocat_Logo.svg" alt="github logo">Github profile</a>
+    <a href="https://elemsocial.com/e/sunday"><img src="pngs/icons/elemlogo.svg" alt="elemsocial">ElemenSocial profile</a>
+    <a href="https://bsky.app/profile/sunday-xyz.bsky.social"><img src="pngs/icons/Bluesky_Logo.svg" alt="Bluesky logo">Bluesky profile</a>
+    <a href="https://x.com/mercury_sunday"><img src="pngs/icons/X_icon.svg" alt="X logo">X profile</a>
 </div>
-
-<div class="profile">
-    <div><span class="semi-transparent"><tt>aliases:Saturn/Wise/MaximKarma/MaximKafka/DanilSunday/milyan/Sunday/yalocaloffgod</tt></div>
-    <div><span class="semi-transparent"><tt>Fandoms: WuWa; ZZZ; Gl; HSR; Expediton 33.</tt></div>
-</div>
-
-<!-- раздел с фотографиями -->
-<div class="photo-gallery">
-    <div class="gallery-toggle" id="galleryToggle">
-        <span class="semi-transparent"><tt>gallery.</tt></span>
-    </div>
-    <div class="gallery-container" id="galleryContainer">
-        <!-- пути к изображениям на -->
-        <div class="gallery-item">
-            <img src="pngs/pics/pic1.jpg" alt="Фото 1">
-        </div>
-        <div class="gallery-item">
-            <img src="pngs/pics/pic2.jpg" alt="Фото 2">
-        </div>
-        </div>
-    </div>
-</div>
-    
-<footer>
-    &copy; <tt>2024 Maxim Kokh</tt>
-</footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const galleryToggle = document.getElementById('galleryToggle');
-        const galleryContainer = document.getElementById('galleryContainer');
-        
-        galleryToggle.addEventListener('click', function() {
-            galleryContainer.classList.toggle('show');
-            
-            // текст при открытии/закрытии (опционально)
-            if (galleryContainer.classList.contains('show')) {
-                galleryToggle.innerHTML = '<span class="semi-transparent"><tt>hide gallery.</tt></span>';
-            } else {
-                galleryToggle.innerHTML = '<span class="semi-transparent"><tt>gallery.</tt></span>';
-            }
-        });
-    });
-</script>
 
 </body>
 </html>
